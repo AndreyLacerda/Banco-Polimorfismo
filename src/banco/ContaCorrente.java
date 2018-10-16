@@ -2,10 +2,6 @@ package banco;
 
 public class ContaCorrente extends Conta {
 	
-	private float saldo;
-	private String correntista;
-	private int numeroConta;
-	
 	public ContaCorrente (float inicial, int numero, String nome) {
 		this.saldo = inicial;
 		this.numeroConta = numero;
@@ -30,7 +26,7 @@ public class ContaCorrente extends Conta {
 
 	@Override
 	public void render() {
-		System.out.println("\nConta não rende");
+		System.out.println("Conta não rende");
 	}
 
 }

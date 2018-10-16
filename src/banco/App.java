@@ -31,8 +31,11 @@ public class App {
 		System.out.println("Saldo Conta Poupança = "+ cp.getSaldo());
 		System.out.println("Saldo Conta Investimento = "+ ci.getSaldo());
 		
+		System.out.print("\nRendimento Conta Corrente = "); 
 		cc.render();
+		System.out.print("Rendimento Conta Poupança = "); 
 		cp.render();
+		System.out.print("Rendimento Conta Investimento = "); 
 		ci.render();
 		
 		System.out.println("\nSaldo Conta Corrente = "+ cc.getSaldo());

@@ -1,6 +1,10 @@
 package banco;
 public abstract class Conta {
 	
+	protected float saldo;
+	protected String correntista;
+	protected int numeroConta;
+	
 	public abstract float getSaldo();
 	
 	public abstract void depositar(float valor);

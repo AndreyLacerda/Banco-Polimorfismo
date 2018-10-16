@@ -2,10 +2,6 @@ package banco;
 
 public class ContaInvestimento extends Conta{
 	
-	private float saldo;
-	private String correntista;
-	private int numeroConta;
-	
 	public ContaInvestimento (float inicial, int numero, String nome) {
 		this.saldo = inicial;
 		this.numeroConta = numero;
@@ -30,5 +26,6 @@ public class ContaInvestimento extends Conta{
 	
 	public void render() {
 		this.saldo = this.saldo * 1.05f;
+		System.out.println("Conta rendeu 5%");
 	}
 }
