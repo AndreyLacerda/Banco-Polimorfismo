@@ -10,6 +10,16 @@ public class ContaPoupanca extends Conta{
 	}
 	
 	@Override
+	public TipoConta getTipo() {
+		return this.tipo;
+	}
+	
+	@Override
+	public Correntista getDono() {
+		return this.correntista;
+	}
+	
+	@Override
 	public void depositar(float valor) {
 		this.saldo = this.saldo + (valor*1.01f);
 		

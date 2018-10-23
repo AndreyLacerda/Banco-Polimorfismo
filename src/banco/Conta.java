@@ -8,6 +8,10 @@ public abstract class Conta {
 	
 	public abstract float getSaldo();
 	
+	public abstract TipoConta getTipo();
+	
+	public abstract Correntista getDono();
+	
 	public abstract int getNumero();
 	
 	public abstract void depositar(float valor);
