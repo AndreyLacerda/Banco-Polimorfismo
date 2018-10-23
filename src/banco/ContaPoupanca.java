@@ -2,10 +2,11 @@ package banco;
 
 public class ContaPoupanca extends Conta{
 	
-	public ContaPoupanca (float inicial, int numero, String nome) {
+	public ContaPoupanca (float inicial, int numero, Correntista dono, TipoConta tipo) {
 		this.saldo = inicial;
 		this.numeroConta = numero;
-		this.correntista = nome;
+		this.correntista = dono;
+		this.tipo = tipo;
 	}
 	
 	@Override
@@ -27,5 +28,10 @@ public class ContaPoupanca extends Conta{
 	@Override
 	public void render() {
 		System.out.println("Conta não rende");
+	}
+	
+	@Override
+	public int getNumero() {
+		return this.numeroConta;
 	}
 }
