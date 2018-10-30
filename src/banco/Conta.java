@@ -6,17 +6,29 @@ public abstract class Conta {
 	protected int numeroConta;
 	protected TipoConta tipo;
 	
-	public abstract float getSaldo();
+	public float getSaldo() {
+		return this.saldo;
+	}
 	
-	public abstract TipoConta getTipo();
+	public TipoConta getTipo() {
+		return this.tipo;
+	}
 	
-	public abstract Correntista getDono();
+	public Correntista getDono() {
+		return this.correntista;
+	}
 	
-	public abstract int getNumero();
+	public int getNumero() {
+		return this.numeroConta;
+	}
 	
-	public abstract void depositar(float valor);
+	public void depositar(float valor) {
+		this.saldo = this.saldo + valor;
+	}
 	
-	public abstract void retirar(float valor);
+	public void retirar(float valor) {
+		this.saldo = this.saldo - valor;
+	}
 	
 	public abstract void render();
 
