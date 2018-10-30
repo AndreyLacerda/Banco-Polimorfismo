@@ -32,7 +32,7 @@ public class Banco {
 		Conta resultado = null;
 		
 		for(Conta conta : this.contas) {
-			if(conta.getNumero() == (numeroConta)) {
+			if(conta.getNumero() == numeroConta) {
 				resultado = conta;
 				break;
 			}
