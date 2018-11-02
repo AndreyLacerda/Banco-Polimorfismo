@@ -8,10 +8,6 @@ public class Banco {
 	private  Collection<Conta> contas = new ArrayList<Conta>();
 	private  Collection<Correntista> correntistas = new ArrayList<Correntista>();
 	
-	public Banco() {
-		
-	}
-	
 	public void adicionarConta(Conta conta) {
 		this.contas.add(conta);
 	}
