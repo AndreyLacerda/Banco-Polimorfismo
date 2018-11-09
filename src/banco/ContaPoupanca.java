@@ -14,9 +14,4 @@ public class ContaPoupanca extends Conta{
 		this.saldo = this.saldo + (valor*1.01f);
 		
 	}
-
-	@Override
-	public void render() {
-		System.out.println("Conta não rende");
-	}
 }

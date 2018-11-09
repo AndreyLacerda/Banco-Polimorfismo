@@ -7,8 +7,10 @@ public class App {
 	public static void main(String args[]) throws IOException {
 		
 		Banco banco = new Banco();
-		Menu mCorrentista = new MenuCorrentista();
-		Menu mConta = new MenuConta();
+		GerenciadorContas gerenteContas = new GerenciadorContas(banco);
+		GerenciadorCorrentista gerenteCorrentistas = new GerenciadorCorrentista(banco);
+		Menu mCorrentista = new MenuCorrentista(gerenteCorrentistas);
+		Menu mConta = new MenuConta(gerenteContas);
 		int menu;
 		String resp = "sim";
 		
@@ -23,11 +25,11 @@ public class App {
 			
 			switch (menu) {
 				case 2:{
-					mCorrentista.telaMenu(banco);
+					mCorrentista.telaMenu();
 					break;
 				}
 				case 1: {
-					mConta.telaMenu(banco);
+					mConta.telaMenu();
 					break;
 				}
 				case 0: {

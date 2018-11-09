@@ -10,8 +10,8 @@ public class ContaCorrente extends Conta {
 	}
 
 	@Override
-	public void render() {
-		System.out.println("Conta não rende");
+	public void depositar(float valor) {
+		this.saldo = this.saldo + valor;
 	}
 
 }

@@ -1,5 +1,5 @@
 package banco;
-public abstract class Conta {
+public abstract class Conta implements Sacável, Depositável{
 	
 	protected float saldo;
 	protected Correntista correntista;
@@ -22,15 +22,11 @@ public abstract class Conta {
 		return this.numeroConta;
 	}
 	
-	public void depositar(float valor) {
-		this.saldo = this.saldo + valor;
-	}
-	
+	public abstract void depositar(float valor);
+
 	public void retirar(float valor) {
 		this.saldo = this.saldo - valor;
 	}
-	
-	public abstract void render();
 
 	public void transferirPara(Conta outraConta, float valor){
 		this.retirar(valor);

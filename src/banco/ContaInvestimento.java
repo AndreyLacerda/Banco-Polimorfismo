@@ -1,6 +1,6 @@
 package banco;
 
-public class ContaInvestimento extends Conta{
+public class ContaInvestimento extends Conta implements Rentável{
 	
 	public ContaInvestimento (float inicial, int numero, Correntista dono, TipoConta tipo) {
 		this.saldo = inicial;
@@ -16,4 +16,10 @@ public class ContaInvestimento extends Conta{
 		float rendimento = this.getSaldo();
 		System.out.println("Saldo Pós rendimento: " +rendimento);
 	}
+	
+	@Override
+	public void depositar(float valor) {
+		this.saldo = this.saldo + valor;
+	}
+
 }
